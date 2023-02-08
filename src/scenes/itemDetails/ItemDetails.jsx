@@ -16,6 +16,7 @@ import { shades } from "../../theme";
 import { useParams } from "react-router-dom";
 import { addToCart } from "../../state";
 import Item from "../../components/Item";
+import shoppingDataList from "../../data/shoppingData";
 
 const ItemDetails = () => {
   const dispatch = useDispatch();
@@ -31,24 +32,13 @@ const ItemDetails = () => {
   };
 
   async function getItem() {
-    const item = await fetch(
-      `http://localhost:1337/api/items/${itemId}?populate=image`,
-      {
-        method: "GET",
-      }
-    );
-    const itemJson = await item.json();
-    setItem(itemJson.data);
+    const item = shoppingDataList.items.find((item) => +item.id === +itemId);
+    console.log(item);
+    setItem(item);
   }
 
   async function getItems() {
-    const items = await fetch(
-      "http://localhost:1337/api/items?populate=image",
-      { method: "GET" }
-    );
-    const itemsJson = await items.json();
-    setItems(itemsJson.data);
-    console.log(items);
+    setItems(shoppingDataList.items);
   }
   useEffect(() => {
     getItem();
@@ -63,7 +53,7 @@ const ItemDetails = () => {
             alt={item?.name}
             width="100%"
             height="100%"
-            src={`http://localhost:1337${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
+            src={`../../.${item?.image}`}
             style={{ objectFit: "contain" }}
           />
         </Box>
@@ -75,11 +65,9 @@ const ItemDetails = () => {
           </Box>
 
           <Box m="65px 0 25px 0">
-            <Typography variant="h3">{item?.attributes?.name}</Typography>
-            <Typography>${item?.attributes?.price}</Typography>
-            <Typography sx={{ mt: "20px" }}>
-              {item?.attributes?.longDescription}
-            </Typography>
+            <Typography variant="h3">{item?.name}</Typography>
+            <Typography>${item?.price}</Typography>
+            <Typography sx={{ mt: "20px" }}>{item?.longDescription}</Typography>
           </Box>
 
           <Box display="flex" alignItems="center" minHeight="50px">
@@ -117,7 +105,7 @@ const ItemDetails = () => {
               <FavoriteBorderOutlinedIcon />
               <Typography sx={{ ml: "5px" }}>ADD TO WISHLIST</Typography>
             </Box>
-            <Typography>CATEGORIES: {item?.attributes?.category}</Typography>
+            <Typography>CATEGORIES: {item?.category}</Typography>
           </Box>
         </Box>
       </Box>
@@ -129,9 +117,7 @@ const ItemDetails = () => {
         </Tabs>
       </Box>
       <Box display="flex" flexWrap="wrap" gap="15px">
-        {value === "description" && (
-          <div>{item?.attributes?.longDescription}</div>
-        )}
+        {value === "description" && <div>{item?.longDescription}</div>}
         {value === "reviews" && <div>reviews</div>}
       </Box>
 

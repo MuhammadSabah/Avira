@@ -6,15 +6,6 @@ import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import { shades } from "../../theme";
 import heroTextureImports from "../../assets/images.js";
 
-// const importAll = (r) =>
-//   r.keys().reduce((acc, item) => {
-//     acc[item.replace("./", "")] = r(item);
-//     return acc;
-//   }, {});
-
-// const heroTextureImports = importAll(
-//   require.context("../../assets", false, /\.(png|jpe?g|svg)$/)
-// );
 
 const MainCarousel = () => {
   const isNonMobile = useMediaQuery("(min-width:600px)");

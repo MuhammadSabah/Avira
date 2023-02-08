@@ -10,14 +10,14 @@ import { loadStripe } from "@stripe/stripe-js";
 
 const initialValues = {
   billingAddress: {
-    firstName: "asdf",
-    lastName: "asdf",
-    country: "sadf",
-    street1: "asdf",
-    street2: "asdf",
-    city: "asdf",
-    state: "adsf",
-    zipCode: "asdf",
+    firstName: "",
+    lastName: "",
+    country: "",
+    street1: "",
+    street2: "",
+    city: "",
+    state: "",
+    zipCode: "",
   },
   shippingAddress: {
     isSameAddress: true,
@@ -30,8 +30,8 @@ const initialValues = {
     state: "",
     zipCode: "",
   },
-  email: "hama.s.ibrahim9@gmail.com",
-  phoneNumber: "9647511630373",
+  email: "",
+  phoneNumber: "",
 };
 
 const checkoutSchema = [
@@ -85,11 +85,6 @@ const checkoutSchema = [
   }),
 ];
 
-//
-const stripePromise = loadStripe(
-  "pk_test_51MXZQzGriR84N9kzMm54GUAjT3it9vif2xlFEs9EZs1r6BLeUqToz50w6sAgQJAC2lIaLA9fhR9uMpj0bdjutSIH00AGFBVV1a"
-);
-//
 const Checkout = () => {
   const [activeStep, setActiveStep] = useState(0);
   const cart = useSelector((state) => state.cart.cart);
@@ -111,32 +106,7 @@ const Checkout = () => {
     actions.setTouched({});
   };
 
-  async function makePayment(values) {
-    const stripe = await stripePromise;
-    const requestBody = {
-      data: {
-        userName: `${values.firstName} ${values.lastName}`,
-        email: values.email,
-        products: cart.map(({ id, count }) => ({
-          id,
-          count,
-        })),
-      },
-    };
-
-    console.log(requestBody);
-    const response = await fetch("http://localhost:1337/api/orders", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(requestBody),
-    });
-
-    console.log(response);
-    const session = await response.json();
-    await stripe.redirectToCheckout({
-      sessionId: session.id,
-    });
-  }
+  async function makePayment(values) {}
 
   return (
     <Box width="80%" m="100px auto">
@@ -190,6 +160,7 @@ const Checkout = () => {
                     fullWidth
                     color="primary"
                     variant="contained"
+                    onClick={(e) => setActiveStep(0)}
                     sx={{
                       backgroundColor: shades.primary[200],
                       boxShadow: "none",

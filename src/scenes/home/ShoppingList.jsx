@@ -3,37 +3,33 @@ import { useDispatch, useSelector } from "react-redux";
 import { Box, Typography, Tab, Tabs, useMediaQuery } from "@mui/material";
 import Item from "../../components/Item";
 import { setItems } from "../../state";
+import shoppingDataList from "../../data/shoppingData";
 
 const ShoppingList = () => {
   const dispatch = useDispatch();
   const [value, setValue] = useState("all");
-  const items = useSelector((state) => state.cart.items);
+  const shoppingData = useSelector((state) => state.cart.items);
   const isNonMobile = useMediaQuery("(min-width:600px)");
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
-  async function getItems() {
-    const items = await fetch(
-      "http://localhost:1337/api/items?populate=image",
-      { method: "GET" }
-    );
-    const itemsJson = await items.json();
-    dispatch(setItems(itemsJson.data));
+  function getItems() {
+    dispatch(setItems(shoppingDataList.items));
   }
 
   useEffect(() => {
     getItems();
   }, []);
 
-  const topRatedItems = items.filter(
-    (item) => item.attributes.category === "topRated"
+  const topRatedItems = shoppingDataList.items.filter(
+    (item) => item.category === "topRated"
   );
-  const newArrivalsItems = items.filter(
-    (item) => item.attributes.category === "newArrivals"
+  const newArrivalsItems = shoppingDataList.items.filter(
+    (item) => item.category === "newArrivals"
   );
-  const bestSellersItems = items.filter(
-    (item) => item.attributes.category === "bestSellers"
+  const bestSellersItems = shoppingDataList.items.filter(
+    (item) => item.category === "bestSellers"
   );
   return (
     <Box width="80%" margin="80px auto">
@@ -68,7 +64,7 @@ const ShoppingList = () => {
         columnGap="1.33%"
       >
         {value === "all" &&
-          items.map((item, index) => (
+          shoppingDataList.items.map((item, index) => (
             <Item item={item} key={`${item.name}-${item.id}`}></Item>
           ))}
         {value === "newArrivals" &&
