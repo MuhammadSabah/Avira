@@ -33,7 +33,6 @@ const ItemDetails = () => {
 
   async function getItem() {
     const item = shoppingDataList.items.find((item) => +item.id === +itemId);
-    console.log(item);
     setItem(item);
   }
 

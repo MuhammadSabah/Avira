@@ -6,7 +6,6 @@ import * as yup from "yup";
 import { shades } from "../../theme";
 import Shipping from "./Shipping";
 import Payment from "./Payment";
-import { loadStripe } from "@stripe/stripe-js";
 
 const initialValues = {
   billingAddress: {
