@@ -1,3 +1,25 @@
+import photo1 from "./images/photo-1.jpeg";
+import photo2 from "./images/photo-2.jpeg";
+import photo3 from "./images/photo-3.jpeg";
+import photo4 from "./images/photo-4.jpeg";
+import photo5 from "./images/photo-5.jpeg";
+import photo6 from "./images/photo-6.jpeg";
+import photo7 from "./images/photo-7.jpeg";
+import photo8 from "./images/photo-8.jpeg";
+import photo9 from "./images/photo-9.jpeg";
+import photo10 from "./images/photo-10.jpeg";
+import photo11 from "./images/photo-11.jpeg";
+import photo12 from "./images/photo-12.jpeg";
+import photo13 from "./images/photo-13.jpeg";
+import photo15 from "./images/photo-15.jpeg";
+import photo16 from "./images/photo-16.jpeg";
+import photo17 from "./images/photo-17.jpeg";
+import photo18 from "./images/photo-18.jpeg";
+import photo19 from "./images/photo-19.jpeg";
+import photo20 from "./images/photo-20.jpeg";
+import photo21 from "./images/photo-21.jpeg";
+import photo22 from "./images/photo-22.jpeg";
+
 const shoppingDataList = {
   items: [
     {
@@ -9,7 +31,7 @@ const shoppingDataList = {
         "Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit.",
       price: 30,
       category: "bestSellers",
-      image: "./src/data/images/photo-12.jpeg",
+      image: photo1,
     },
     {
       id: 2,
@@ -20,7 +42,7 @@ const shoppingDataList = {
         "Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit.",
       price: 45,
       category: "newArrivals",
-      image: "./src/data/images/photo-5.jpeg",
+      image: photo2,
     },
     {
       id: 3,
@@ -31,7 +53,7 @@ const shoppingDataList = {
         "Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit.",
       price: 50,
       category: "topRated",
-      image: "./src/data/images/photo-1.jpeg",
+      image: photo3,
     },
     {
       id: 4,
@@ -42,7 +64,7 @@ const shoppingDataList = {
         "Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit.",
       price: 15,
       category: "newArrivals",
-      image: "./src/data/images/photo-7.jpeg",
+      image: photo4,
     },
     {
       id: 5,
@@ -53,7 +75,7 @@ const shoppingDataList = {
         "Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit.",
       price: 20,
       category: "bestSellers",
-      image: "./src/data/images/photo-19.jpeg",
+      image: photo5,
     },
     {
       id: 6,
@@ -64,7 +86,7 @@ const shoppingDataList = {
         "Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit.",
       price: 45,
       category: "topRated",
-      image: "./src/data/images/photo-15.jpeg",
+      image: photo6,
     },
     {
       id: 7,
@@ -75,7 +97,7 @@ const shoppingDataList = {
         "Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit.",
       price: 70,
       category: "topRated",
-      image: "./src/data/images/photo-20.jpeg",
+      image: photo7,
     },
     {
       id: 8,
@@ -86,7 +108,7 @@ const shoppingDataList = {
         "Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit.",
       price: 25,
       category: "topRated",
-      image: "./src/data/images/photo-21.jpeg",
+      image: photo8,
     },
     {
       id: 9,
@@ -97,7 +119,7 @@ const shoppingDataList = {
         "Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit.",
       price: 35,
       category: "bestSellers",
-      image: "./src/data/images/photo-6.jpeg",
+      image: photo9,
     },
     {
       id: 10,
@@ -108,7 +130,7 @@ const shoppingDataList = {
         "Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit.",
       price: 50,
       category: "newArrivals",
-      image: "./src/data/images/photo-3.jpeg",
+      image: photo10,
     },
     {
       id: 11,
@@ -119,7 +141,7 @@ const shoppingDataList = {
         "Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit.",
       price: 55,
       category: "newArrivals",
-      image: "./src/data/images/photo-11.jpeg",
+      image: photo11,
     },
     {
       id: 12,
@@ -130,7 +152,7 @@ const shoppingDataList = {
         "Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit.",
       price: 20,
       category: "topRated",
-      image: "./src/data/images/photo-8.jpeg",
+      image: photo12,
     },
     {
       id: 13,
@@ -141,7 +163,7 @@ const shoppingDataList = {
         "Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit.",
       price: 15,
       category: "bestSellers",
-      image: "./src/data/images/photo-17.jpeg",
+      image: photo13,
     },
     {
       id: 14,
@@ -152,7 +174,7 @@ const shoppingDataList = {
         "Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit.",
       price: 45,
       category: "bestSellers",
-      image: "./src/data/images/photo-13.jpeg",
+      image: photo15,
     },
     {
       id: 16,
@@ -163,7 +185,7 @@ const shoppingDataList = {
         "Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit.",
       price: 60,
       category: "topRated",
-      image: "./src/data/images/photo-16.jpeg",
+      image: photo16,
     },
     {
       id: 17,
@@ -174,7 +196,7 @@ const shoppingDataList = {
         "Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit.",
       price: 55,
       category: "newArrivals",
-      image: "./src/data/images/photo-22.jpeg",
+      image: photo17,
     },
     {
       id: 18,
@@ -185,7 +207,7 @@ const shoppingDataList = {
         "Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit.",
       price: 65,
       category: "newArrivals",
-      image: "./src/data/images/photo-18.jpeg",
+      image: photo18,
     },
     {
       id: 19,
@@ -196,7 +218,7 @@ const shoppingDataList = {
         "Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit.",
       price: 25,
       category: "topRated",
-      image: "./src/data/images/photo-2.jpeg",
+      image: photo19,
     },
   ],
 };
